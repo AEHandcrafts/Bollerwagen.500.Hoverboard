@@ -175,7 +175,7 @@ format:
 clean:
 	-rm -fR .dep $(BUILD_DIR)
 
-flash:
+flash: all
 	st-flash --reset write $(BUILD_DIR)/$(TARGET).bin 0x8000000
 
 unlock:
